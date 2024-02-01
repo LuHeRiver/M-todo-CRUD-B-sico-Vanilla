@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <form id="bookings-form">
+    <label for="new-name">Name </label><input id="new-name" type="text">
+    <label for="new-phone">Phone </label><input id="phone " type="text">
+    <label for="new-email">E-mail </label><input id="email " type="email">
+    <label for="new-checkin">Check-in </label><input id="checkin " type="date">
+    <label for="new-checkout">Check-out </label><input id="checkout " type="date">
+    <button type="submit" onclick="createBookings()">Add</button>
+</form>
+<button onclick="printBookings()">Update Info</button>
+<button onclick="postBookings()">+</button>
+<section id="booking-list">
+
+</section>
+    <script src="./src/services.js"></script>
+</body>
+</html>
