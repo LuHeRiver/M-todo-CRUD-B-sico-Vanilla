@@ -3,19 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/src/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap" rel="stylesheet">
+    <title>Room Booking Form</title>
 </head>
 <body> 
+    <h1>Room Booking Form</h1>
     <form id="bookings-form">
     <label for="new-name">Name </label><input id="new-name" type="text">
     <label for="new-phone">Phone </label><input id="phone " type="text">
     <label for="new-email">E-mail </label><input id="email " type="email">
     <label for="new-checkin">Check-in </label><input id="checkin " type="date">
     <label for="new-checkout">Check-out </label><input id="checkout " type="date">
-    <button type="submit" onclick="createBookings()">Add</button>
+    <button type="submit" class="button-booking" onclick="createBookings()">Add</button>
 </form>
-<button onclick="printBookings()">Update Info</button>
-<button onclick="postBookings()">+</button>
+<button class="button-booking" onclick="printBookings()">Update Info</button>
+<button class="button-booking" onclick="postBookings()">+</button>
 <section id="booking-list">
 
 </section>

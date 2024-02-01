@@ -1,0 +1,18 @@
+*{
+    margin:0;
+    padding: 0.5%;
+    box-sizing:border-box;
+    font-family: 'Jost', sans-serif;
+  }
+
+body{
+  background-color: rgb(214, 148, 236);
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 50px;
+    margin-bottom: 5%;
+}
