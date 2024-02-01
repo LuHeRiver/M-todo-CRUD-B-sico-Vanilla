@@ -1,20 +1,21 @@
 // Método GET R (read) del CRUD
-async function getBookings() {
-    const result = await fetch("http://localhost:3000/bookings")
-    const data = await result.json()
-    return data
+async function getBookings() { // getUsers hace una peticion a la API  y se la pasa a json para que nos devuelva datos.
+    const result = await fetch("http://localhost:3000/bookings") //Hace la petición a la API
+    const data = await result.json() //El resutado pásamelo a json, await para que espere xq va a pasar.
+    return data //data es un array con distintos usuarios.
 }
 
-let sectionTag = document.getElementById("booking-list")
-async function printBookings() {
-    let bookings = await getBookings()
-    bookings.map(booking => { 
+let sectionTag = document.getElementById("booking-list") // Selecciona mi sección del html por su id.
+async function printBookings() {   // pido que me imprima los datos.
+    let bookings = await getBookings()  // invocamos a la función anterior para que nos devuelva un array de usuarios.
+    bookings.map(booking => {  // con map recorro el array, por cada user(usuario) imprime una etiqueta html, es decir, que imprima los usuarios.
+        // Quiere decir que dentro de la etiqueta tag me añada este html que te escribo.
         sectionTag.innerHTML += 
         `<h3>${booking.name}</h3> 
         <p>${booking.phone}</p>
         <p>${booking.email}</p>
         <p>${booking.checkin}</p>
-        <p>${booking.checkout}</p> 
+        <p>${booking.checkout}</p>
         <button onclick="deleteBooking('${booking.id}')">Delete</button>`
 })
 }
